@@ -1,0 +1,35 @@
+﻿@page
+@model ASP.NET_Website.Pages.CalculatorModel
+@{
+	ViewData["Title"] = "Hesap Makinesi";
+}
+
+<div class="calculator-adding text-center border">
+	<br />
+	<h1>Hesap Makinesi</h1><br />
+
+	<div class="calculator-indexes">
+		<a>Sayı 1 </a>
+		<input type="number" id="index1" /><br /><br />
+
+		<a>Sayı 2</a>
+		<input type="number" id="index2" /><br /><br />
+	</div>
+
+	<a>Topla</a>
+	<input class="calculator-operator" type="radio" name="operator" id="add" value="+" />
+
+	<a>Çıkar</a>
+	<input class="calculator-operator" type="radio" name="operator" id="subtract" value="-" /><br /><br />
+
+	<a>Çarp</a>
+	<input class="calculator-operator" type="radio" name="operator" id="multiply" value="*" />
+
+	<a>Böl</a>
+	<input class="calculator-operator" type="radio" name="operator" id="divide" value="/" /><br /><br /><br />
+
+	<button onclick="Calculator()">Hesapla</button><br /><br />
+	<a>Cevap = </a><a id="answer">0</a><br /><br />
+</div>
+
+<script src="./js/site.js"></script>
