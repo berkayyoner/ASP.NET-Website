@@ -1,0 +1,43 @@
+﻿@page
+@model ASP.NET_Website.Pages.Form.NewModel
+@{
+	ViewData["Title"] = "New";
+}
+
+<body>
+	<form class="text-center border" method="post">
+		<br />
+		<h1>Yeni</h1><br />
+
+		@if (Model.errorMessage.Length > 0)
+		{
+			<div class="alert alert-warning" role="alert">
+				<strong>@Model.errorMessage</strong>
+				<button type="button" class="btn-close" data-dismiss="alert"></button>
+			</div>
+
+			<br />
+
+			<br />
+		}
+
+		<input type="text" id="name" placeholder="İsim" name="name" value="@Model.formInfo.Name" /><br /><br />
+		<input type="text" id="surname" placeholder="Soyisim" name="surname" value="@Model.formInfo.Surname" /><br /><br />
+		<a>Doğum günü </a><input type="date" id="birthday" name="birthday" value="@Model.formInfo.Birthday" /><br /><br />
+
+		@if (Model.successMessage.Length > 0)
+		{
+			<div class="alert alert-success" role="alert">
+				<strong>@Model.successMessage</strong>
+				<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+				</button>
+			</div>
+
+			<br />
+
+			<br />
+		}
+
+		<button onclick="">Kaydet</button><br /><br />
+	</form>
+</body>

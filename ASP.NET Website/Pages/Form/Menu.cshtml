@@ -1,0 +1,41 @@
+﻿@page
+@model ASP.NET_Website.Pages.Form.MenuModel
+@{
+	ViewData["Title"] = "Menu";
+}
+
+<body>
+	<div class="border">
+		<h1 class="text-center">Form</h1>
+		<br />
+		<a asp-area="" asp-page="/Form/New" class="button">Yeni</a><br />
+		<table class="table text-center">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>İsim</th>
+					<th>Soyisim</th>
+					<th>Doğum Tarihi</th>
+					<th>Seçenekler</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model.FormInfos)
+				{
+					<tr>
+						<td>@item.ID</td>
+						<td>@item.Name</td>
+						<td>@item.Surname</td>
+						<td>@item.Birthday</td>
+						<td>
+							<button asp-area="" asp-page="/Form/Edit?id=@item.ID">Düzenle</button>
+							<button asp-area="" asp-page="/Form/Delete?id=@item.ID">Sil</button>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</body>
+
+<script src="./js/site.js"></script>

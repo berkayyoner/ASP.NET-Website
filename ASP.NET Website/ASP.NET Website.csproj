@@ -8,15 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Model\**" />
-    <Content Remove="Model\**" />
-    <EmbeddedResource Remove="Model\**" />
-    <None Remove="Model\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.2" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
   </ItemGroup>
 
 </Project>

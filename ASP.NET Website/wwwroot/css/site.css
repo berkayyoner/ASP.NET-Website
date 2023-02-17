@@ -48,7 +48,6 @@ body {
 .navbar-button {
     text-decoration: none;
     color: white;
-    color: white;
     float: left;
     padding: 15px;
     padding-top: 30px;
@@ -74,4 +73,14 @@ body {
 .calculator-operator {
     margin: 3px;
     margin-right: 15px;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(75, 75, 75, 0.356);
+    border: solid black 1px;
+    padding: 5px;
+    border-radius: 30%;
+    margin: 20px;
 }

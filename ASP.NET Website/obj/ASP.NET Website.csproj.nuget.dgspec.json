@@ -44,9 +44,9 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
-            "System.Data.SqlClient": {
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[5.1.0, )"
             }
           },
           "imports": [
